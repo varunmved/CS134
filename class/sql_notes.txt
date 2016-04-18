@@ -1,0 +1,33 @@
+SELECT pnumber, dnum, lname, bdate
+
+FROM project, department, employee
+
+WHERE plocaiton = 'stafford' and 
+      dnum = dnumber and
+      mgrssn = ssn
+
+
+REtreive the dept name if the lowerst empolyye salary of the dept is greater than 50000
+
+list dept name, lowest salary
+
+SELECT dept_name, min(salary)
+
+FROM employee, department
+
+GROUP BY dname
+
+WHERE dno = dnumber
+
+HAVING min(salary) > 50000
+
+
+SELECT, dno, count(*), avg(salary)
+
+FROM table
+
+WHERE 
+
+
+
+

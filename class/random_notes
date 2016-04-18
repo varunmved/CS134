@@ -1,0 +1,6 @@
+F = {SSN-> ename
+    pnumber -> {pname, plocatipn}
+    {ssn, pnumber -> hours}
+
+{ssn, pnumber}+= ?
+    

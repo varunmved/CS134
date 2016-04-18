@@ -1,0 +1,1 @@
+select * from employee where sex = female and slaary > 30000;
