@@ -1,12 +1,8 @@
---Varun Ved
---CS134 MySQL
---Initialize DB first, then run the script in side MySQL shell
-
 CREATE TABLE Customer
 (
     ssn char(9),
-    fanme varchar(25),
-    lanme varchar(25),
+    fname varchar(25),
+    lname varchar(25),
     phone char(10),
     address varchar(50),
     PRIMARY KEY (ssn)
@@ -26,8 +22,8 @@ CREATE TABLE Owns
     ssn char(9),
     acc_no char(9),
     own_date date,
-    FOREIGN KEY (ssn) REFERNCES Customer(ssn),
-    FOREIGN KEY (acc_no) refrences Account(acc_no)
+    FOREIGN KEY (ssn) references Customer(ssn),
+    FOREIGN KEY (acc_no) references Account(acc_no)
 );
 
 CREATE TABLE Loan
@@ -46,14 +42,14 @@ CREATE TABLE Payment
     method varchar(10),
     status varchar(10),
     due_date date,
-    FOREIGN KEY (loan_no) refrences Loan(loan_no)
+    FOREIGN KEY (loan_no) references Loan(loan_no)
 );
 
 CREATE TABLE Borrows
 (
     ssn char(9),
     loan_no char(9),
-    FOREIGN KEY (ssn) REFERNCES Customer(ssn),
-    FOREIGN KEY (loan_no) refrences Loan(loan_no)
+    FOREIGN KEY (ssn) references Customer(ssn),
+    FOREIGN KEY (loan_no) references Loan(loan_no)
 );
 
